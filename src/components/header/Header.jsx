@@ -10,6 +10,7 @@ export default function Header() {
           <h1> <p>the Supernatural</p></h1>
       </div>
       <img className="headerImg" src={require('../../images/dog.jpg')} alt=''/>
+      
     </div>
     </>
   );

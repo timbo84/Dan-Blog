@@ -19,7 +19,8 @@ export default function BookStore() {
       <h1><p>Evince</p></h1>
           <p>(Reveal the presence of)</p>
           <h1> <p>the Supernatural</p></h1>
-      <img className="headerImg" src={require('../../images/logo.jpg')} alt=''/>
+
+      <img  className="headerImg"  src={ '/Images/logo.jpg'}  alt="" />
       </div>
     </div>
     
@@ -28,8 +29,8 @@ export default function BookStore() {
       
       <div className="cater">
         
-        <img src={require('../../images/deep.jpg')} alt='' id='test'
-         height="250" width="160"/>
+         <img src={ '/Images/deep.jpg'}  alt="" id='test'
+         height="250" width="160"/> 
          
             <div id="p">
               
@@ -50,8 +51,8 @@ strictly scientific people who sent you here from Earth?
       </div>
 
       <div className="cater">
-        <img src={require('../../images/arrival.jpg')} alt='' id='test'
-         height="250" width="160"/>
+         <img src={ '/Images/arrival.jpg'} alt='' id='test'
+         height="250" width="160"/> 
             <div id="p">
 
             <p>
@@ -70,8 +71,8 @@ generations? </p>
       </div>
 
       <div className="cater">
-        <img src={require('../../images/earth.jpg')} alt='' id='test'
-         height="250" width="160"/>
+         <img src={'Images/earth.jpg'} alt='' id='test'
+         height="250" width="160"/> 
             <div id="p">
 
             <p>
@@ -92,8 +93,8 @@ such a collision.</p>
 
 
            <div className="cater">
-        <img src={require('../../images/christ.jpg')} alt='' id='test'
-         height="250" width="160"/>
+        <img src={'/Images/christ.jpg'} alt='' id='test'
+         height="250" width="160"/> 
             <div id="p">
 
             <p>
@@ -119,8 +120,8 @@ Jesus..</p>
 
 
            <div className="cater">
-        <img src={require('../../images/around.jpg')} alt='' id='test'
-         height="250" width="160"/>
+         <img src={'Images/around.jpg'} alt='' id='test'
+         height="250" width="160"/> 
             <div id="p">
 
             <p>
@@ -148,8 +149,8 @@ and partly as the view of youth.</p>
 
            <div className="cater">
         
-        <img src={require('../../images/draw.jpg')} alt='' id='test'
-         height="250" width="160"/>
+         <img src={'Images/draw.jpg'} alt='' id='test'
+         height="250" width="160"/> 
          
             <div id="p">
               

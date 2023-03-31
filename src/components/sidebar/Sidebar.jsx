@@ -6,7 +6,8 @@ export default function Sidebar() {
       <div className="sidebar">
         <div className="sidebarItem">
           <span className="sidebarTitle">ABOUT ME</span>
-          <img className="topImg" src={require('../../Dan-photes/theman.jpg')} alt=''/>
+          
+          <img  className="topImg"  src={ '/Images/theman.jpg'} alt="" />
           <p>
           Personal vision statement:
 I hope to inspire people to

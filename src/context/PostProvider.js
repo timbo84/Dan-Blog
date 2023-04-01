@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 //y
 export const PostProvider = (props) => {
     const [ postList, setPostList ] = useState([]);
-    const baseUrl =  "http://localhost:8800/Post/";
+    const baseUrl =  "http://localhost:8800/posts/";
 
 useEffect(() => {
     async function getAllPost() {
@@ -27,10 +27,10 @@ useEffect(() => {
         return setPostList(response.data); //h
     }
 //y title post
-    async function createPost(title,post) {       
-        let image = {title,post};
+    async function createPost(title, post) {       
+        let post = {title, post};
         let myHeaders = {
-            Authorization: `Bearer ${localStorage.getItem('myMessageToken')}`
+            Authorization: `Bearer ${localStorage.getItem('myUserToken')}`
         };
         const response = await axios.post(baseUrl, post, { headers: myHeaders });
         console.log('success')
@@ -38,19 +38,19 @@ useEffect(() => {
         return await new Promise(resolve => resolve(response.data));
     }
     //y
-    async function  getPostByPostId(userId) {
+    async function  getPostById(postId) {
         
-        return axios.get(baseUrl + userId).then(response => {
+        return axios.get(baseUrl + postId).then(response => {
           console.log(response.data)
           return new Promise(resolve => resolve(response.data));
         })
     }
 //y
-    async function deletePost(userPostLinkId) {
+    async function deletePost(postId) {
         let myHeaders = {
-            Authorization: `Bearer ${localStorage.getItem('myMessageToken')}`
+            Authorization: `Bearer ${localStorage.getItem('myUserToken')}`
         };
-        const response = await axios.delete(baseUrl + userPostLinkId, { headers: myHeaders });
+        const response = await axios.delete(baseUrl + postId, { headers: myHeaders });
         
         return await new Promise(resolve => resolve(response.data));
     }
@@ -58,7 +58,7 @@ useEffect(() => {
     return (
         <PostContext.Provider value={{
             postList, //h
-            getPostByPostId,
+            getPostById,
             getAllPost,
             createPost,
             deletePost

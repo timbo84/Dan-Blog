@@ -4,14 +4,14 @@ import { useState } from "react";
 //maybe
 export const UserProvider = (props) => {
     const [ userList, setUserList ] = useState([]);
-    const baseUrl =  "http://localhost:8800/User/";
+    const baseUrl =  "http://localhost:8800/user/";
 
 
      // user name not email
     async function Login(username, password) {
       let signin = {username, password};
         const response = await axios.post(`${baseUrl}login`, signin);
-        localStorage.setItem('myMessageToken', response.data);
+        localStorage.setItem('myUserToken', response.data);
         localStorage.setItem('username', username); 
         return await new Promise(resolve => resolve(response.data));
 

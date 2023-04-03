@@ -28,11 +28,11 @@ useEffect(() => {
     }
 //y title post
     async function createPost(title, post) {       
-        let post = {title, post};
+        let Post = {title, post};
         let myHeaders = {
             Authorization: `Bearer ${localStorage.getItem('myUserToken')}`
         };
-        const response = await axios.post(baseUrl, post, { headers: myHeaders });
+        const response = await axios.post(baseUrl, Post, { headers: myHeaders });
         console.log('success')
         refreshPostList(); //h
         return await new Promise(resolve => resolve(response.data));

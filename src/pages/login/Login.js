@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import UserContext from "../../context/UserContext";
 import { Form, Button, Col, Row } from "react-bootstrap";
-
+import { useNavigate } from "react-router-dom";
 
 
 {/* Sign In Page Function */ }
@@ -14,6 +14,7 @@ function Login() {
 
   let { Login } = useContext(UserContext);
   let { username, password } = login;
+  let navigate = useNavigate();
 
   function handleChange(event) {
     setLogin((preValue) => {
@@ -24,6 +25,7 @@ function Login() {
   function handleSubmit(event) {
     event.preventDefault();
     Login(username, password);
+        navigate(`/`);
     console.log(login);
     
   }

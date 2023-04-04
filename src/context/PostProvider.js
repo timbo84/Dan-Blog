@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 //y
 export const PostProvider = (props) => {
     const [ postList, setPostList ] = useState([]);
-    const baseUrl =  "http://localhost:8800/posts/";
+    const baseUrl =  "http://localhost:8800/api/posts/";
 
 useEffect(() => {
     async function getAllPost() {
@@ -32,6 +32,7 @@ useEffect(() => {
         let myHeaders = {
             Authorization: `Bearer ${localStorage.getItem('myUserToken')}`
         };
+        console.log(myHeaders);
         const response = await axios.post(baseUrl, Post, { headers: myHeaders });
         console.log('success')
         refreshPostList(); //h
@@ -45,6 +46,16 @@ useEffect(() => {
           return new Promise(resolve => resolve(response.data));
         })
     }
+
+    async function updatePost(post) {
+        let myHeaders = {
+            Authorization: `Bearer ${localStorage.getItem('myUserToken')}`
+        };
+        const response = await axios.put(baseUrl, post, { headers: myHeaders });
+        refreshPostList();
+        return await new Promise(resolve => resolve(response.data));
+    }
+
 //y
     async function deletePost(postId) {
         let myHeaders = {
@@ -61,6 +72,7 @@ useEffect(() => {
             getPostById,
             getAllPost,
             createPost,
+            updatePost,
             deletePost
         }}>
             { props.children }

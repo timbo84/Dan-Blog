@@ -1,8 +1,16 @@
+import React from 'react';
+import PostContext from "../../context/PostContext";
 import "./post.css";
 
-export default function Post({img}) {
+export default function Post() {
   return (
-    <div className="post">
+<PostContext.Consumer>
+{
+  ({postList}) => {
+    return <>
+      {postList.map((p) => {
+        return (
+          <div className="post" key={p.postId}>
       
       <div className="postInfo">
         <div className="postCats">
@@ -19,18 +27,22 @@ export default function Post({img}) {
         </div>
         <span className="postTitle">
           <span to="/post/abc" className="link">
-            Lorem ipsum dolor sit amet
+            {p.title}
           </span>
         </span>
         <hr />
-        <span className="postDate">1 hour ago</span>
+        <span className="postDate">{p.createdAt}</span>
       </div>
       <p className="postDesc">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
-        officia architecto deserunt deleniti? Labore ipsum aspernatur magnam
-        fugiat, reprehenderit praesentium blanditiis quos cupiditate ratione
-        atque, exercitationem quibusdam, reiciendis odio laboriosam?
+        {p.post}
       </p>
     </div>
+        )
+      })}
+    </>
+  }
+}
+    
+    </PostContext.Consumer>
   );
 }

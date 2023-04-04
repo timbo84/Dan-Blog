@@ -1,61 +1,54 @@
-.login {
-    height: calc(100vh - 50px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0.5)
-      ),
-      url("https://images.pexels.com/photos/768473/pexels-photo-768473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
-    background-size: cover;
-  }
+/* Top Section Background ---------------------------------- */
+
+#signin-card {
+
+ background-color: gray;
+  max-width: 700px;
+  margin: auto;
   
-  .loginTitle {
-    font-size: 50px;
-  }
-  
-  .loginForm {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .loginForm > label {
-    margin: 10px 0;
-  }
-  
-  .loginInput {
-    padding: 10px;
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-  }
-  
-  .loginInput:focus {
-    outline: none;
-  }
-  
-  .loginButton {
-    margin-top: 20px;
-    cursor: pointer;
-    background-color: lightcoral;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    text-align: center;
-  }
-  
-  .loginRegisterButton {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: teal;
-    cursor: pointer;
-    padding: 10px;
-    border: none;
-    color: white;
-    border-radius: 10px;
-  }
+  align-self: center;
+  align-content: center;
+  text-align: center;
+  align-content: center;
+  align-items: center important !;
+  display: 'flex';
+  justify-content: center;
+  flex-direction: row;
+  font-size: 1em;
+  font-family: 'Abel', sans-serif;
+}
+
+
+
+ #signinFormButton {
+  margin-left: -2.5em;
+  border-radius: 50px;
+  border: 0pt;
+  background-color: #9cd9e1;
+  padding: 10px 20px;
+  color: #1b3d49;
+  font-weight: bolder;
+  font-family: 'Abel', sans-serif;
+  color: #1b3d49;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#signinFormButton:hover {
+  margin-left: -2.5em;
+  border-radius: 50px;
+  border-width: 0%;
+  border: 0pt;
+  background-color: blue;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bolder;
+  font-family: 'Abel', sans-serif;
+}
+
+#bored {
+  font-family: 'Abel', sans-serif;
+  color: #cdebef;
+  font-size: medium;
+}
+

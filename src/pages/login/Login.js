@@ -1,8 +1,7 @@
 import React, { useContext, useState } from "react";
 import UserContext from "../../context/UserContext";
 import { Form, Button, Col, Row } from "react-bootstrap";
-
-
+import "./login.css";
 
 {/* Sign In Page Function */ }
 function Login() {
@@ -33,9 +32,9 @@ function Login() {
      
 
       {/* Sign In form section*/}
-      <div id="background" xs={12} md={6} lg={4}>
+      <div id="login" xs={12} md={6} lg={4}>
         <Form onSubmit={handleSubmit}>
-          <Row className=" justify-content-center">
+          <Row className=" justify-content-center" id="signin-card">
 
             <h1 className="text-center justify-content-center align-self-center">SIGN IN</h1>
            
@@ -51,7 +50,7 @@ function Login() {
             </Form.Group>
           </Row>
 
-          <Row className=" justify-content-center">
+          <Row className=" justify-content-center" id="signin-card">
             <Form.Group className="mb-3">
               <Form.Label >Password</Form.Label>
               <Form.Control
@@ -63,7 +62,7 @@ function Login() {
             </Form.Group>
           </Row>
 
-          <Row className="justify-content-center">
+          <Row className="justify-content-center" id="signin-card">
             <Form.Group className="col-1">
               <Col xs={12} sm={4} md={4} lg={4}>
                 <Button id="signinFormButton" type="submit">

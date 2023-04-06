@@ -1,30 +1,73 @@
-
+import Carousel from "react-bootstrap/Carousel";
 import "./sidebar.css";
 
 export default function Sidebar() {
-    return (
-      <div className="sidebar">
-        <div className="sidebarItem">
-          <span className="sidebarTitle">ABOUT ME</span>
-          
-          <img  className="topImg"  src={ '/Images/theman.jpg'} alt="" />
-          <p>
-          Personal vision statement:
-I hope to inspire people to
- have a life that makes sense, 
- both to them and to God.
-
-          </p>
-        </div>
-        <div className="sidebarItem">
-        <span className="sidebarTitle">FOLLOW US</span>
-        <div className="sidebarSocial">
-          <i className="sidebarIcon fab fa-facebook-square"></i>
-          <i className="sidebarIcon fab fa-instagram-square"></i>
-          <i className="sidebarIcon fab fa-pinterest-square"></i>
-          <i className="sidebarIcon fab fa-twitter-square"></i>
-        </div>
-      </div>
+  return (
+    <div className="sidebar">
+      <Carousel>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={"/Images/arrival.jpg"}
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h3>INSIDE THE SHOP</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={"/Images/around.jpg"}
+            alt="Second slide"
+          />
+          <Carousel.Caption>
+            <h3>PEACEFUL EATING AREA</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={"/Images/christ.jpg"}
+            alt="Third slide"
+          />
+          <Carousel.Caption>
+            <h3>PARKING AREA</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={"/Images/earth.jpg"}
+            alt="Fourth slide"
+          />
+          <Carousel.Caption>
+            <h3>INSIDE THE SHOP</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={"/Images/draw.jpg"}
+            alt="Fifth slide"
+          />
+          <Carousel.Caption>
+            <h3>INSIDE THE SHOP</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={"/Images/deep.jpg"}
+            alt="Sixth slide"
+          />
+          <Carousel.Caption>
+            <h3>INSIDE THE SHOP</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        
+            
+      </Carousel>
     </div>
   );
 }

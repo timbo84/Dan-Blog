@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { UserProvider } from './context/UserProvider';
 import { PostProvider } from './context/PostProvider';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 

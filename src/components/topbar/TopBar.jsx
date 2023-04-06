@@ -22,7 +22,7 @@ export default function Topbar() {
 
   useEffect(() => {
     async function fetch() {
-        await getUserById(1).then((user) =>
+        await getUserById(2).then((user) =>
             setUser(user)
         );
         console.log(user);

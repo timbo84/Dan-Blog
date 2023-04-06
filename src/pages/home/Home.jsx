@@ -2,7 +2,7 @@ import Header from "../../components/header/Header";
 import Posts from "../../components/posts/Posts";
 import Sidebar from "../../components/sidebar/Sidebar";
 import "./home.css";
-import Footer from "../../components/footer/Footer";
+// import Footer from "../../components/footer/Footer";
 
 export default function Home() {
 
@@ -14,7 +14,7 @@ export default function Home() {
         <Posts />
         <Sidebar />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

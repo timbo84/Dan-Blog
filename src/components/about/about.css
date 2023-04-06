@@ -1,0 +1,9 @@
+.aboutContent {
+    font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 25px;
+    line-height: 2rem;
+    margin-top: 15px;
+    margin: 5rem;
+    cursor: pointer;
+}

@@ -4,7 +4,7 @@
 .top {
     width: 100%;
     height: 90px;
-    background-color: white;
+    background-color: rgba(212, 199, 181, 0);
     position: sticky;
     top: 0;
     display: flex;

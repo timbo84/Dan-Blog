@@ -1,72 +1,53 @@
-.write {
-    padding-top: 50px;
+body {
+  background-color: rgba(212, 199, 181, 0.707);
+}
+#form {
+  background-image: url(https://i.pinimg.com/originals/52/e6/1f/52e61fa70e69dfd3ba218e99d5ea8d87.jpg);
+  background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+  
+  #write-card {
+
+    background-color: rgba(128, 128, 128, 0.621);
+     max-width: 700px;
+     margin: auto;
+     
+     align-self: center;
+     align-content: center;
+     text-align: center;
+     align-content: center;
+     align-items: center important !;
+     display: 'flex';
+     justify-content: center;
+     flex-direction: row;
+     font-size: 1em;
+     font-family: 'Abel', sans-serif;
+   }
+
+   #writeFormButton {
+    margin-left: 0em;
+    border-radius: 50px;
+    border: 0pt;
+    background-color: #9cd9e1;
+    padding: 10px 20px;
+    color: #1b3d49;
+    font-weight: bolder;
+    font-family: 'Abel', sans-serif;
+    color: #1b3d49;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
   }
   
-  .writeImg {
-    margin-left: 150px;
-    width: 70vw;
-    height: 250px;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-  
-  .writeForm {
-    position: relative;
-  }
-  
-  .writeFormGroup {
-    margin-left: 150px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .writeIcon {
-    width: 25px;
-    height: 25px;
-    font-size: 20px;
-    border: 1px solid;
-    border-radius: 50%;
-    color: rgb(129, 125, 125);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
-  .writeInput {
-    font-size: 30px;
-    border: none;
-    padding: 20px;
-    width: 70vw;
-  }
-  
-  .writeInput::placeholder {
-    color: rgb(189, 185, 185);
-    font-weight: 400;
-  }
-  
-  .writeInput:focus {
-    outline-style: none;
-  }
-  
-  .writeText {
-    width: 70vw;
-    height: 100vh;
-    font-family: inherit;
-    font-size: 20px;
-  }
-  
-  .writeSubmit {
-    position: absolute;
-    top: 20px;
-    right: 50px;
+  #writeFormButton:hover {
+    margin-left: 0em;
+    border-radius: 50px;
+    border-width: 0%;
+    border: 0pt;
+    background-color: blue;
+    padding: 10px 20px;
     color: white;
-    background-color: teal;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+    font-weight: bolder;
+    font-family: 'Abel', sans-serif;
   }

@@ -40,6 +40,7 @@ function AddPost() {
             <Row className=" justify-content-center" id="write-card-title">
               <Form.Label>Title</Form.Label>
             </Row>
+            
             <Form.Control type="text" name="title" value={title} onChange={handleChange} />
           </Form.Group>
           <br/>

@@ -51,8 +51,9 @@ useEffect(() => {
         let myHeaders = {
             Authorization: `Bearer ${localStorage.getItem('myUserToken')}`
         };
-        const response = await axios.put(baseUrl, post, { headers: myHeaders });
+        const response = await axios.put(`http://localhost:8800/api/posts/${post.postId}`, post, { headers: myHeaders });
         refreshPostList();
+        
         return await new Promise(resolve => resolve(response.data));
     }
 

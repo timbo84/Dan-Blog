@@ -7,6 +7,7 @@ import BookStore from "./pages/store/BookStore";
 import About from "./components/about/About";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/Footer";
+import EditPost from "./pages/edit/EditPost";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="A9B8C7D6E5F4G3H2I1" element={<Login />} />
           <Route path="/write" element={<Write />} />
           <Route path="/post/:postId" element={<Single />} />
+          <Route path="post/:postId/Edit" element={<EditPost />} />
         </Routes>
         <Footer />
       </Router>

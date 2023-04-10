@@ -26,7 +26,7 @@ function Login() {
   function handleSubmit(event) {
     event.preventDefault();
     Login(username, password);
-        navigate(`/`);
+        navigate(`/write`);
     console.log(login);
     
   }

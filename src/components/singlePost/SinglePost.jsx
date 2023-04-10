@@ -1,6 +1,26 @@
+import { useContext, useState, useEffect } from 'react'
+import { useParams } from "react-router-dom";
 import "./singlePost.css";
+import PostContext from '../../context/PostContext';
+import SimpleDateTime  from 'react-simple-timestamp-to-date';
 
 export default function SinglePost() {
+  let [Post, setPost] = useState({
+    title:"",
+    post:"",
+    createdAt:""
+  })
+  let {getPostById} = useContext(PostContext)
+  let params = useParams()
+  useEffect(() => {
+    async function fetch() {
+        await getPostById(params.postId)
+            .then((post) => setPost(post))
+    }
+    fetch()
+}, [params.postId]);
+let {title, post, createdAt} = Post
+
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
@@ -10,7 +30,7 @@ export default function SinglePost() {
           alt=""
         />
         <h1 className="singlePostTitle">
-          Lorem ipsum dolor
+          {title}
           <div className="singlePostEdit">
             <i className="singlePostIcon far fa-edit"></i>
             <i className="singlePostIcon far fa-trash-alt"></i>
@@ -25,37 +45,14 @@ export default function SinglePost() {
               </span>
             </b>
           </span>
-          <span>1 day ago</span>
+          <span>
+        <SimpleDateTime dateFormat="MDY" dateSeparator="/"  showTime='0'>{createdAt}</SimpleDateTime>
+        <hr/>
+        <SimpleDateTime dateFormat="MDY" showDate='0' timeSeparator=":" meridians="1">{createdAt}</SimpleDateTime>
+        </span>
         </div>
         <p className="singlePostDesc">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste error
-          quibusdam ipsa quis quidem doloribus eos, dolore ea iusto impedit!
-          Voluptatum necessitatibus eum beatae, adipisci voluptas a odit modi
-          eos! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste
-          error quibusdam ipsa quis quidem doloribus eos, dolore ea iusto
-          impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas a
-          odit modi eos! Lorem, ipsum dolor sit amet consectetur adipisicing
-          elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea
-          iusto impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas
-          a odit modi eos! Lorem, ipsum dolor sit amet consectetur adipisicing
-          elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea
-          iusto impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas
-          a odit modi eos! Lorem, ipsum dolor sit amet consectetur adipisicing
-          elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea
-          iusto impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas
-          a odit modi eos!
-          <br />
-          <br />
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste error
-          quibusdam ipsa quis quidem doloribus eos, dolore ea iusto impedit!
-          Voluptatum necessitatibus eum beatae, adipisci voluptas a odit modi
-          eos! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste
-          error quibusdam ipsa quis quidem doloribus eos, dolore ea iusto
-          impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas a
-          odit modi eos! Lorem, ipsum dolor sit amet consectetur adipisicing
-          elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea
-          iusto impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas
-          a odit modi eos! Lorem, ipsum dolor sit amet consectetur.
+         {post}
         </p>
       </div>
     </div>

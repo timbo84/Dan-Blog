@@ -44,14 +44,14 @@ export default function Topbar() {
         <div className="top">
           <div className="topLeft">
             <Link to="/" class="navbar-brand align-items-center">
-              <img src={process.env.PUBLIC_URL + '/Images/logo-vectorV3.png'} height="70" alt="Evince" />
+              <img src={process.env.PUBLIC_URL + '/Images/logofinal-navbar1.png'} height="120" alt="Evince" />
             </Link>
 
             {/* <i className="topIcon fab fa-facebook-square"></i>
         <i className="topIcon fab fa-instagram-square"></i>
         <i className="topIcon fab fa-pinterest-square"></i>
         <i className="topIcon fab fa-twitter-square"></i> */}
-          </div>
+         </div>
           <div className="topCenter">
             <ul className="topList">
               <li className="topListItem">
@@ -80,7 +80,7 @@ export default function Topbar() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> 
           <div className="topRight">
             <Link className="link" to="/settings">
             </Link>
@@ -96,7 +96,7 @@ export default function Topbar() {
         <div className="top">
           <div className="topLeft">
             <Link to="/" class="navbar-brand align-items-center">
-              <img src={process.env.PUBLIC_URL + '/Images/logo-vectorV3.png'} height="70" alt="Evince" />
+              <img src={process.env.PUBLIC_URL + '/Images/logofinal-navbar1.png'} height="120" alt="Evince" />
             </Link>
 
             {/* <i className="topIcon fab fa-facebook-square"></i>

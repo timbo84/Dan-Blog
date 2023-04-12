@@ -1,19 +1,50 @@
 import "./header.css";
+import { Row, Col, Carousel } from "react-bootstrap";
 
 export default function Header() {
   return (
     <>
-    <div className="header">
-    <div className="container">
-      <h1><p>Evince</p></h1>
-          <p>(Reveal the presence of)</p>
-          <h1> <p>the Supernatural</p></h1>
-      </div>
+      <section>
+        <div className='bgCover'>
+          <div className="container" style={{ minHeight: '900px' }}>
+            <div className="text-center justify-content-center align-self-center">
+              <Row>
+                <Col>
+                  <div>
+                    <img height="250" src={'/Images/logofinal.png'} alt="" />
+                  </div>
+                  <br /><br />
+                  <p>BY DAN LEMAIRE</p>
+                </Col>
 
-    
-      <img  className="headerImg"  src={ '/Images/dog.jpg'}  alt="" />
+                <Col id="carouselPosition">
+                  <Carousel id="carousel" slide={false}>
+                    <Carousel.Item>
+                      <img height="450" src='/Images/arrival-bg.png' alt="The Second Arrival"/>
+                      <div id="carouselCaption">
+                        <Carousel.Caption><p>THE SECOND ARRIVAL</p></Carousel.Caption>
+                      </div>
+                    </Carousel.Item>
 
-    </div>
+                    <Carousel.Item>
+                      <img height="450" src='/Images/around-bg.png' alt="Around the World in 480 Days"/>
+                      <div id="carouselCaption">
+                        <Carousel.Caption><p>AROUND THE WORLD IN 480 DAYS</p></Carousel.Caption>
+                      </div>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <img height="450" src='/Images/christ-bg.png' alt="Christianese. The Language of Those Who Believe in Jesus"/>
+                      <div id="carouselCaption">
+                        <Carousel.Caption><p>CHRISTIANESE</p></Carousel.Caption>
+                      </div>
+                    </Carousel.Item>
+                  </Carousel>
+                </Col>
+              </Row>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

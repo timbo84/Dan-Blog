@@ -1,18 +1,59 @@
 
 #footer {
-    background-color:rgb(22, 21, 21);
+    background-color:#2a3246;
     text-align: center;
     width: 100%;
     bottom: 0;
 }
 
 .p {
-    color: rgb(80, 77, 77);
-    font-size: 5px;
+    color: #e1f1f9;
+    font-size: 15px;
     font-family: "Varela Round", sans-serif;
-    padding: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 0.1rem;
 }
 
 .logoFooter{
+    text-align: center;
     padding-top: 2rem;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
 }
+
+
+/* .footerCenter {
+    flex: 6;
+  } */
+  
+  .footerList {
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  .footerListItem {
+    margin-top: 2rem;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: left;
+    justify-content: center;
+    cursor: pointer;
+    font-family: "Josefin Sans", sans-serif;
+    color: #e1f1f9;
+
+  }
+  
+  .footerListItem:hover{
+      color: #ffe4b2;
+      font-family: "Josefin Sans", sans-serif;
+      text-decoration: none;
+  }
+  
+  .footerLink {
+    color:#e1f1f9;
+  }
+  
+  .footerLink:hover {
+    color: #ffe4b2;
+  }

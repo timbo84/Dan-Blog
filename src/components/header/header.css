@@ -1,37 +1,39 @@
-.header {
-  margin-top: 60px;
-}
-
-.headerTitles {
+.bgCover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Lora", serif; 
-}
-.container{
-  color: #444;
-  text-align: center;
-  top: 18%;
-  font-size: 40px;
-}
-
-.headerTitleSm {
-  position: absolute;
-  top: 11%;
-  font-size: 20px;
-  color: black;
+  justify-content: center;
+  margin-top: 0px;
+  background: url("/public/Images/dog-filter.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #e1f1f9;
 }
 
-.headerTitleLg {
-  position: absolute;
-  top: 15%;
-  font-size: 100px;
-  color: black;
+.bgCover img {
+  margin-top: 14rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-.headerImg{
-    width: 100%;
-    height: 450px;
-    margin-top: 80px;
-    object-fit: cover;
+#carouselPosition {
+  align-items: center;
+  justify-content: center;
 }
+
+.carousel .right.carousel-control, .left.carousel-control {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#carouselCaption {
+  padding-top: 6rem;
+}
+
+#carouselCaption p {
+  color: #ffe4b2;
+}
+

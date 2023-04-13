@@ -1,3 +1,7 @@
+.homeSection {
+  background-color: #ffe4b2;
+}
+
 .home {
   display: flex;
   background-color: rgba(212, 199, 181, 0.707);

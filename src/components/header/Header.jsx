@@ -6,7 +6,7 @@ export default function Header() {
     <>
       <section>
         <div className='bgCover'>
-          <div className="container" style={{ minHeight: '900px' }}>
+          <div className="container" style={{ minHeight: '800px' }}>
             <div className="text-center justify-content-center align-self-center">
               <Row>
                 <Col>

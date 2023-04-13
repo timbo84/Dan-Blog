@@ -7,10 +7,12 @@ export default function Home() {
 
   return (
     <>
-      <Header />
-      <div className="home">
-        <Posts />
-      </div>
+      <section id="homeSection">
+        <Header />
+        <div className="home">
+          <Posts />
+        </div>
+      </section>
     </>
   );
 }

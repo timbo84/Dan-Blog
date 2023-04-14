@@ -3,7 +3,7 @@ import "./topbar.css";
 import { useContext, useState, useEffect } from "react";
 import UserContext from "../../context/UserContext";
 import Login from "../../pages/login/Login";
-import { Button } from "react-bootstrap";
+import { Button, Form, Row, Col } from "react-bootstrap";
 
 export default function Topbar() {
   let { getUserById } = useContext(UserContext);
@@ -35,6 +35,11 @@ export default function Topbar() {
     navigate('/')
     console.log("clicked")
   }
+
+    const handleChange = (event) => {
+        if (event.target.value === "") return;
+        navigate('Search/' + event.target.value)
+    }
 
   let Auth = localStorage.getItem("username");
 
@@ -81,7 +86,22 @@ export default function Topbar() {
             </Link>
             <ul className="topList">
             </ul>
-            <i className="topSearchIcon fas fa-search"></i>
+            <div id="searchBar">
+                <Row>
+                    <Col >
+                        <Form className="d-flex">
+                            <Form.Control
+                                id="searchInput"
+                                type="search"
+                                placeholder="Search For A Blog"
+                                className="d-sm-flex"
+                                aria-label="Search"
+                                onChange={handleChange} />
+                            <Button id='searchButton' variant="outline-success"><img src={process.env.PUBLIC_URL + '/Images/searchicon.png'} height="20px" alt="DanTheMan" /></Button>
+                        </Form>
+                    </Col>
+                </Row>
+            </div>
           </div>
         </div>
       )
@@ -128,7 +148,22 @@ export default function Topbar() {
           </div>
 
           <div className="topRight">
-            <i className="topSearchIcon fas fa-search"></i>
+          <div id="searchBar">
+                <Row>
+                    <Col >
+                        <Form className="d-flex">
+                            <Form.Control
+                                id="searchInput"
+                                type="search"
+                                placeholder="Search For A Blog"
+                                className="d-sm-flex"
+                                aria-label="Search"
+                                onChange={handleChange} />
+                            <Button id='searchButton' variant="outline-success"><img src={process.env.PUBLIC_URL + '/Images/searchicon.png'} height="20px" alt="DanTheMan" /></Button>
+                        </Form>
+                    </Col>
+                </Row>
+            </div>
           </div>
         </div>
       )

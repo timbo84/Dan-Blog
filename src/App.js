@@ -8,6 +8,7 @@ import About from "./components/about/About";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import EditPost from "./pages/edit/EditPost";
+import Search from "./pages/search/Search";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/write" element={<Write />} />
           <Route path="/post/:postId" element={<Single />} />
           <Route path="post/:postId/Edit" element={<EditPost />} />
+          <Route path="search/:filter" element={<Search />} />
         </Routes>
         <Footer />
       </Router>

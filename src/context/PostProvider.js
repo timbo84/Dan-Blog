@@ -47,6 +47,17 @@ useEffect(() => {
         })
     }
 
+    function searchPost(search) {
+
+        return axios.get(`${baseUrl}Search/${search}`)
+          .then(response =>
+            new Promise((resolve) => resolve(response.data))
+          )
+          .catch((error) =>
+            new Promise((_, reject) => reject(error.response.statusText))
+          )
+      }
+
     async function updatePost(post) {
         let myHeaders = {
             Authorization: `Bearer ${localStorage.getItem('myUserToken')}`
@@ -74,6 +85,7 @@ useEffect(() => {
             getAllPost,
             createPost,
             updatePost,
+            searchPost,
             deletePost
         }}>
             { props.children }

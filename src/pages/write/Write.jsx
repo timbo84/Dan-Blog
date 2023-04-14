@@ -36,13 +36,10 @@ function AddPost() {
         <Row className=" justify-content-center" id="write-card">
         <br/>
           <h1>ADD A POST</h1>
-          <Form.Group as={Col} id="formLabels">
-            <Row className=" justify-content-center" id="write-card-title">
-              <Form.Label>Title</Form.Label>
-            </Row>
-            
+          <InputGroup as={Col} id="formLabels">
+            <InputGroup.Text>Title</InputGroup.Text>
             <Form.Control type="text" name="title" value={title} onChange={handleChange} />
-          </Form.Group>
+          </InputGroup>
           <br/>
         </Row>
         <Row className=" justify-content-center" id="write-card">

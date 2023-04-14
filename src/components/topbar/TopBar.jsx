@@ -3,7 +3,7 @@ import "./topbar.css";
 import { useContext, useState, useEffect } from "react";
 import UserContext from "../../context/UserContext";
 import Login from "../../pages/login/Login";
-import { Button,Form, Row, Col, Navbar } from "react-bootstrap";
+import { Button, Form, Row, Col, Navbar } from "react-bootstrap";
 
 
 
@@ -41,7 +41,7 @@ export default function Topbar() {
 
   useEffect(() => {
     async function fetch() {
-      await getUserById(2).then((user) =>
+      await getUserById(1).then((user) =>
         setUser(user)
       );
       console.log(user);
@@ -55,10 +55,10 @@ export default function Topbar() {
     console.log("clicked")
   }
 
-    const handleChange = (event) => {
-        if (event.target.value === "") return;
-        navigate('Search/' + event.target.value)
-    }
+  const handleChange = (event) => {
+    if (event.target.value === "") return;
+    navigate('Search/' + event.target.value)
+  }
 
   let Auth = localStorage.getItem("username");
 
@@ -66,149 +66,157 @@ export default function Topbar() {
     if (Auth === user.username) {
       return (
         <>
-        <Navbar
-          id="top"
-          expand="md"
-          expanded={expanded}
-          collapseOnSelect={true}
-        >
-          <Navbar.Toggle onClick={handleToggle} />
-          <div className="topLeft">
-            <Link to="/" class="navbar-brand align-items-center">
-              <img
-                src={process.env.PUBLIC_URL + "/Images/logofinal-navbar.png"}
-                height="120"
-                alt="Evince"
-              />
-            </Link>
-          </div>
-          <Navbar.Collapse>
-            <div>
-              <div className="topCenter">
-                <ul className="topList">
-                  <li className="topListItem">
-                    <Link className="link" to="/">
-                      HOME
-                    </Link>
-                  </li>
+          <Navbar
+            id="top"
+            expand="md"
+            expanded={expanded}
+            collapseOnSelect={true}
+          >
+            <Navbar.Toggle onClick={handleToggle} />
+            <div className="topLeft">
+              <Link to="/" class="navbar-brand align-items-center">
+                <img
+                  src={process.env.PUBLIC_URL + "/Images/logofinal-navbar.png"}
+                  height="120"
+                  alt="Evince"
+                />
+              </Link>
+            </div>
+            <Navbar.Collapse>
+              <div>
+                <div className="topCenter">
+                  <ul className="topList">
+                    <li className="topListItem">
+                      <Link className="link" to="/">
+                        HOME
+                      </Link>
+                    </li>
 
-                  <li className="topListItem">
-                    <Link className="link" to="/about">
-                      ABOUT
-                    </Link>
-                  </li>
+                    <li className="topListItem">
+                      <Link className="link" to="/about">
+                        ABOUT
+                      </Link>
+                    </li>
 
-                  <li className="topListItem">
-                    <Link className="link" to="/bookstore">
-                      BOOK STORE
-                    </Link>
-                  </li>
+                    <li className="topListItem">
+                      <Link className="link" to="/bookstore">
+                        BOOK STORE
+                      </Link>
+                    </li>
 
-                  <li className="topListItem">
-                    <Link className="link" to="/A9B8C7D6E5F4G3H2I1">
-                      LOGIN
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="topRight">
-          <div id="searchBar">
-                <Row>
-                    <Col >
-                        <Form className="d-flex">
-                            <Form.Control
+                    <li className="topListItem">
+                      <Link className="link" to="/write">
+                        WRITE A BLOG
+                      </Link>
+                    </li>
+                    <li className="topListItem">
+                      <Link className="link" variant="link" onClick={logout}>
+                        LOG OUT
+                      </Link>
+                    </li>
+                    <div className="topRight">
+                      <div id="searchBar">
+                        <Row>
+                          <Col >
+                            <Form className="d-flex">
+                              <Form.Control
                                 id="searchInput"
                                 type="search"
                                 placeholder="Search For A Blog"
                                 className="d-sm-flex"
                                 aria-label="Search"
                                 onChange={handleChange} />
-                            <Button id='searchButton' variant="outline-success"><img src={process.env.PUBLIC_URL + '/Images/searchicon.png'} height="20px" alt="DanTheMan" /></Button>
-                        </Form>
-                    </Col>
-                </Row>
-            </div>
-          </div>
-        </div>
-          </Navbar.Collapse>
-        </Navbar>
-      </>
+                              <Button id='searchButton' variant="outline-success"><img src={process.env.PUBLIC_URL + '/Images/searchicon.png'} height="20px" alt="DanTheMan" /></Button>
+                            </Form>
+                          </Col>
+                        </Row>
+                      </div>
+                    </div>
+
+                  </ul>
+                </div>
+
+
+              </div>
+            </Navbar.Collapse>
+          </Navbar>
+        </>
       )
     }
     else {
       return (
         <>
-        <Navbar
-          id="top"
-          expand="md"
-          expanded={expanded}
-          collapseOnSelect={true}
-        >
-          <Navbar.Toggle onClick={handleToggle} />
-          <div className="topLeft">
-            <Link to="/" class="navbar-brand align-items-center">
-              <img
-                src={process.env.PUBLIC_URL + "/Images/logofinal-navbar.png"}
-                height="120"
-                alt="Evince"
-              />
-            </Link>
-          </div>
-          <Navbar.Collapse>
-            <div>
-              <div className="topCenter">
-                <ul className="topList">
-                  <li className="topListItem">
-                    <Link className="link" to="/">
-                      HOME
-                    </Link>
-                  </li>
+          <Navbar
+            id="top"
+            expand="md"
+            expanded={expanded}
+            collapseOnSelect={true}
+          >
+            <Navbar.Toggle onClick={handleToggle} />
+            <div className="topLeft">
+              <Link to="/" class="navbar-brand align-items-center">
+                <img
+                  src={process.env.PUBLIC_URL + "/Images/logofinal-navbar.png"}
+                  height="120"
+                  alt="Evince"
+                />
+              </Link>
+            </div>
+            <Navbar.Collapse>
+              <div>
+                <div className="topCenter">
+                  <ul className="topList">
+                    <li className="topListItem">
+                      <Link className="link" to="/">
+                        HOME
+                      </Link>
+                    </li>
 
-                  <li className="topListItem">
-                    <Link className="link" to="/about">
-                      ABOUT
-                    </Link>
-                  </li>
+                    <li className="topListItem">
+                      <Link className="link" to="/about">
+                        ABOUT
+                      </Link>
+                    </li>
 
-                  <li className="topListItem">
-                    <Link className="link" to="/bookstore">
-                      BOOK STORE
-                    </Link>
-                  </li>
+                    <li className="topListItem">
+                      <Link className="link" to="/bookstore">
+                        BOOK STORE
+                      </Link>
+                    </li>
 
-                  <li className="topListItem">
-                    <Link className="link" to="/A9B8C7D6E5F4G3H2I1">
-                      LOGIN
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="topRight">
-          <div id="searchBar">
-                <Row>
-                    <Col >
-                        <Form className="d-flex">
-                            <Form.Control
+                    <li className="topListItem">
+                      <Link className="link" to="/A9B8C7D6E5F4G3H2I1">
+                        LOGIN
+                      </Link>
+                    </li>
+                    <div className="topRight">
+                      <div id="searchBar">
+                        <Row>
+                          <Col >
+                            <Form className="d-flex">
+                              <Form.Control
                                 id="searchInput"
                                 type="search"
                                 placeholder="Search For A Blog"
                                 className="d-sm-flex"
                                 aria-label="Search"
                                 onChange={handleChange} />
-                            <Button id='searchButton' variant="outline-success"><img src={process.env.PUBLIC_URL + '/Images/searchicon.png'} height="20px" alt="DanTheMan" /></Button>
-                        </Form>
-                    </Col>
-                </Row>
-            </div>
-          </div>
-        </div>
-          </Navbar.Collapse>
-        </Navbar>
-      </>
+                              <Button id='searchButton' variant="outline-success"><img src={process.env.PUBLIC_URL + '/Images/searchicon.png'} height="20px" alt="DanTheMan" /></Button>
+                            </Form>
+                          </Col>
+                        </Row>
+                      </div>
+                    </div>
+                  </ul>
+                </div>
 
-        
+
+              </div>
+            </Navbar.Collapse>
+          </Navbar>
+        </>
+
+
       )
     }
   }

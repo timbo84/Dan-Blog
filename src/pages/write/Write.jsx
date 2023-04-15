@@ -26,6 +26,7 @@ function AddPost() {
     event.preventDefault();
     createPost(title, description)
     navigate(`/`);
+    window.location.reload();
     console.log(post);
   }
 

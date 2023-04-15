@@ -1,6 +1,9 @@
 /* .write{
   color: white;
 } */
+#root {
+  background-color: rgba(192, 176, 153, 0.707);
+}
 
 #top {
   width: 100%;
@@ -83,7 +86,7 @@
 }
 
 #searchBar {
-  background-color: #cdebef; 
+  background-color: #2a3246; 
   display: 'flex';
   padding: 9px 25px;
   position: sticky;
@@ -95,10 +98,11 @@
 #searchInput {
   max-width: 300px;
   font-family: 'Abel', sans-serif;
-  color: #9cd9e1;
+  color: #242d2f;
   border-color: white;
   border-radius: 0px;
   margin-right: 10px;
+  background-color: rgb(191, 243, 239);
 }
 
 #searchInput:hover {
@@ -115,7 +119,7 @@
 }
 
 #searchButton:hover {
-background-color:#9cd9e1;
+background-color:#38435e;
 padding: 3px;
 border-radius: 100px;
 padding-left: 8px;

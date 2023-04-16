@@ -51,7 +51,6 @@ export default function Topbar() {
 
   function logout() {
     localStorage.clear();
-    navigate('/')
     console.log("clicked")
   }
 
@@ -110,7 +109,7 @@ export default function Topbar() {
                       </Link>
                     </li>
                     <li className="topListItem">
-                      <Link className="link" variant="link" onClick={logout}>
+                      <Link className="link" variant="link" to="/" onClick={logout}>
                         LOG OUT
                       </Link>
                     </li>

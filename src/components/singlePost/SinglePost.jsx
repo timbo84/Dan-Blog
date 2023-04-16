@@ -38,12 +38,7 @@ let {title, post, createdAt} = Post
         </h1>
         <div className="singlePostInfo">
           <span>
-            Author:
-            <b className="singlePostAuthor">
-              <span className="link" to="/posts?username=Safak">
-                Safak
-              </span>
-            </b>
+            Author: Dan Lemaire
           </span>
           <span>
         <SimpleDateTime dateFormat="MDY" dateSeparator="/"  showTime='0'>{createdAt}</SimpleDateTime>

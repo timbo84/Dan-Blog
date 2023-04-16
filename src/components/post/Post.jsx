@@ -66,7 +66,7 @@ let Auth = localStorage.getItem("username");
           </span>
         </div>
         <span className="postTitle">
-          <span to="/post/abc" className="link">
+          <span to="/post/abc">
             {p.title}
           </span>
         </span>
@@ -102,7 +102,7 @@ let Auth = localStorage.getItem("username");
           </span>
         </div>
         <span className="postTitle">
-          <span to="/post/abc" className="link">
+          <span to="/post/abc">
             {p.title}
           </span>
         </span>

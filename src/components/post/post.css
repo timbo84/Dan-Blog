@@ -3,6 +3,8 @@
     margin: 0px 25px 40px 25px;
     display: flex;
     flex-direction: column;
+    border: solid black;
+    text-align: center;
   }
   
   .postImg {
@@ -35,7 +37,7 @@
     font-weight: 900;
     margin-top: 15px;
     cursor: pointer;
-    color: #444444;
+    color: black;
   }
   
   .postDate {
@@ -43,7 +45,7 @@
     font-style: italic;
     font-size: 13px;
     font-weight: 400;
-    color: #999999;
+    color: black;
     margin-top: 15px;
   }
   
@@ -52,7 +54,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    color: #444444;
+    color: black;
     margin-top: 15px;
     overflow: hidden;
     text-overflow: ellipsis;

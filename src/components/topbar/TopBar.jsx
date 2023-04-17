@@ -3,7 +3,7 @@ import "./topbar.css";
 import { useContext, useState, useEffect } from "react";
 import UserContext from "../../context/UserContext";
 import Login from "../../pages/login/Login";
-import { Button, Form, Row, Col, Navbar } from "react-bootstrap";
+import { Button, Form, Row, Col, Navbar, NavDropdown } from "react-bootstrap";
 
 
 
@@ -113,6 +113,12 @@ export default function Topbar() {
                         LOG OUT
                       </Link>
                     </li>
+                    <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                      <NavDropdown.Divider />
+                      <NavDropdown.Item>
+                        345lemaire@gmail.com
+                      </NavDropdown.Item>
+                    </NavDropdown>
                     <div className="topRight">
                       <div id="searchBar">
                         <Row>
@@ -182,12 +188,18 @@ export default function Topbar() {
                         BOOK STORE
                       </Link>
                     </li>
-
                     <li className="topListItem">
+                    <NavDropdown title="CONTACT ME" id="basic-nav-dropdown">
+                      <NavDropdown.Item>
+                        345lemaire@gmail.com
+                      </NavDropdown.Item>
+                    </NavDropdown>
+                    </li>
+                    {/* <li className="topListItem">
                       <Link className="link" to="/A9B8C7D6E5F4G3H2I1">
                         LOGIN
                       </Link>
-                    </li>
+                    </li> */}
                     <div className="topRight">
                       <div id="searchBar">
                         <Row>

@@ -33,10 +33,12 @@ export default function Footer() {
                                         BOOK STORE
                                     </Link>
                                 </li>
+                                <li className="footerListItem">
+                                </li>
                                 {/* </ul> */}
                             </div>
                         </Col>
-                        <p className="p" >© 2023 Evince. All rights reserved</p>
+                        <p className="p" >© 2023 Evince. All rights reserved | Contact me: 345lemaire@gmail.com | Created By: JYT DESIGNS</p>
                     </Row>
                 </footer>
             </section>

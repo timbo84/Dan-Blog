@@ -208,8 +208,6 @@ export default function Topbar() {
                     </div>
                   </ul>
                 </div>
-
-
               </div>
             </Navbar.Collapse>
           </Navbar>

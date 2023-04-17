@@ -10,7 +10,7 @@ export default function BookStore() {
     <>
       <div>
         <img className="headerImg" src={'/Images/bookstore-bg-banner.png'} alt="" />
-      </div>
+      
 
       <div className="caterLight">
         <Row>
@@ -24,6 +24,7 @@ export default function BookStore() {
             </Col>
           </Col>
           <Col>
+          
           <div id="bookSectionLight">
               <h4 className="bookTitle">  Deep Delta T: </h4>
               <p className="bookDetailLight"> (Book 1 of Delta T Trilogy)</p>
@@ -36,7 +37,7 @@ export default function BookStore() {
           </Col>
         </Row>
       </div>
-
+      </div>
       <div className="caterDark">
         <Row>
           <Col id='bookImage'>

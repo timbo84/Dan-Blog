@@ -56,12 +56,12 @@ let Auth = localStorage.getItem("username");
         <div className="postCats">
           <span className="postCat">
             <Link className="link" to={`/post/${p.postId}`}>
-              Music
+              {/* Music */}
             </Link>
           </span>
           <span className="postCat">
             <span className="link" to="/posts?cat=Music">
-              Life
+              {/* Life */}
             </span>
           </span>
         </div>
@@ -92,12 +92,12 @@ let Auth = localStorage.getItem("username");
         <div className="postCats">
           <span className="postCat">
             <Link className="link" to={`/post/${p.postId}`}>
-              Music
+              {/* Music */}
             </Link>
           </span>
           <span className="postCat">
             <span className="link" to="/posts?cat=Music">
-              Life
+              {/* Life */}
             </span>
           </span>
         </div>

@@ -38,6 +38,24 @@ export default function Header() {
                         <Carousel.Caption><p>CHRISTIANESE</p></Carousel.Caption>
                       </div>
                     </Carousel.Item>
+                    <Carousel.Item>
+                      <img height="450" src='/Images/deep-bg.png' alt="Christianese. The Language of Those Who Believe in Jesus"/>
+                      <div id="carouselCaption">
+                        <Carousel.Caption><p>Deep Delta</p></Carousel.Caption>
+                      </div>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <img height="450" src='/Images/draw-bg.png' alt="Christianese. The Language of Those Who Believe in Jesus"/>
+                      <div id="carouselCaption">
+                        <Carousel.Caption><p>Drawing Mandalas</p></Carousel.Caption>
+                      </div>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                      <img height="450" src='/Images/earth-bg.png' alt="Christianese. The Language of Those Who Believe in Jesus"/>
+                      <div id="carouselCaption">
+                        <Carousel.Caption><p>Mission Earth</p></Carousel.Caption>
+                      </div>
+                    </Carousel.Item>
                   </Carousel>
                 </Col>
               </Row>

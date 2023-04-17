@@ -1,35 +1,33 @@
-
-.headerImg{
+.headerImg {
   width: 100%;
-  height: 325px;
+  height: 400px;
   margin-top: 80px;
   object-fit: cover;
   padding-top: 0%;
-  float:top ;
-}
-.p{
-  font-size:medium;
-}
-.containerb{
-  color: white;
-  text-align: center;
-  padding-top: 60px;
-}
-.cater {
-  border-top: none;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
-  border-bottom: 1px solid white;
-  padding: 60px;
-  overflow: auto;
-  text-align:start;
-  font-size: 40px;
-  background-color: #000;
-}
-#p{
-  color: azure;
+  float: top;
 }
 
+.caterLight {
+  border-top: none;
+  /* border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white; */
+  padding: 5rem;
+  overflow: auto;
+  text-align: start;
+  background-color: #e1f1f9;
+}
+
+.caterDark {
+  border-top: none;
+  /* border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white; */
+  padding: 5rem;
+  overflow: auto;
+  text-align: start;
+  background-color: #2a3246;
+}
 
 .cater::after {
   content: "";
@@ -37,61 +35,86 @@
   display: table;
 }
 
-#test{ float: right; }
+#bookImage {
+  align-content: center;
+  text-align: center;
+}
 
+#bookSectionLight {
+  padding-top: 1rem;
+  color: #2a3246;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+}
 
+#bookSectionDark {
+  padding-top: 1rem;
+  color:#e1f1f9;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+}
 
-  
+.bookTitle {
+  font-size: 40px;
+}
 
+.bookDescription {
+  font-size: 30px;
+  margin-top: 2rem;
+  font-weight: 200;
+}
 
-.pics {
-    display: flex;
-    height: 300px;
-    flex-wrap: wrap;
-    align-content:space-between;
-    margin: 20px;
-  }
+.bookDetailLight {
+  color: #2a3246;
+  font-size: 20px;
+}
 
-  .pis {
-    display: flex;
-    height: 300px;
-    flex-wrap: wrap;
-    align-content:space-between;
-    margin: 20px;
-  }
+.bookDetailDark {
+  color:#e1f1f9;
+  font-size: 20px;
+}
 
+#orderButtonLight {
+  background-color: #2a3246;
+  color:antiquewhite;
+  font-size: 20px;
+  padding: 1rem;
+  border-radius: 0%;
+  border-color: transparent;
+  margin-top: 2rem;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  text-align: center;
+  align-items: center;
+}
 
+#orderButtonDark {
+  background-color:#e1f1f9;
+  color:#2a3246;
+  font-size: 20px;
+  padding: 1rem;
+  border-radius: 0%;
+  border-color: transparent;
+  margin-top: 2rem;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  text-align: center;
+  align-items: center;
+}
 
-  
-  .headerb {
-    margin-top: 60px;
-    background-color: #000;
-    font-size: 30px;
-  }
-  
-  .headerTitles {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "Lora", serif;
-    color: #444;
-  }
-  
-  .headerTitleSmb {
-    align-items: flex-start;
-    top: 18%;
-    color: white;
-  }
-  
-  .headerTitleLg {
-    position: absolute;
-    top: 20%;
-    font-size: 100px;
-  }
-  
-  .logo {
-    width: 100%;
-    height: 450px;
-    margin-top: 80px;
-    object-fit: cover;
-  }
+.headerTitles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lora", serif;
+  color: #444;
+}
+
+.headerTitleSmb {
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  align-items: flex-start;
+  top: 18%;
+  color: white;
+}
+
+.headerTitleLg {
+  position: absolute;
+  top: 20%;
+  font-size: 100px;
+}

@@ -195,11 +195,11 @@ export default function Topbar() {
                       </NavDropdown.Item>
                     </NavDropdown>
                     </li>
-                    {/* <li className="topListItem">
+                    <li className="topListItem">
                       <Link className="link" to="/A9B8C7D6E5F4G3H2I1">
                         LOGIN
                       </Link>
-                    </li> */}
+                    </li>
                     <div className="topRight">
                       <div id="searchBar">
                         <Row>

@@ -115,7 +115,7 @@ export default function Topbar() {
                     </li>
                     <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                       <NavDropdown.Divider />
-                      <NavDropdown.Item>
+                      <NavDropdown.Item id="dropdownContact">
                         345lemaire@gmail.com
                       </NavDropdown.Item>
                     </NavDropdown>
@@ -130,7 +130,7 @@ export default function Topbar() {
                                 id="searchInput"
                                 type="search"
                                 placeholder="Search For A Blog"
-                                // className="d-sm-flex"
+                                className="d-sm-flex"
                                 aria-label="Search"
                                 onChange={handleChange} />
                             </Form>

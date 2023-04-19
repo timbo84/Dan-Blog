@@ -119,19 +119,20 @@ export default function Topbar() {
                         345lemaire@gmail.com
                       </NavDropdown.Item>
                     </NavDropdown>
+  
                     <div className="topRight">
                       <div id="searchBar">
                         <Row>
-                          <Col >
+                          <Col>
+                            <Button id='searchButton' variant="outline-success"><img src={process.env.PUBLIC_URL + '/Images/searchicon.png'} height="40px" alt="DanTheMan" /></Button>
                             <Form className="d-flex">
                               <Form.Control
                                 id="searchInput"
                                 type="search"
                                 placeholder="Search For A Blog"
-                                className="d-sm-flex"
+                                // className="d-sm-flex"
                                 aria-label="Search"
                                 onChange={handleChange} />
-                              <Button id='searchButton' variant="outline-success"><img src={process.env.PUBLIC_URL + '/Images/searchicon.png'} height="20px" alt="DanTheMan" /></Button>
                             </Form>
                           </Col>
                         </Row>
@@ -189,11 +190,11 @@ export default function Topbar() {
                       </Link>
                     </li>
                     <li className="topListItem">
-                    <NavDropdown title="CONTACT ME" id="basic-nav-dropdown">
-                      <NavDropdown.Item>
-                        345lemaire@gmail.com
-                      </NavDropdown.Item>
-                    </NavDropdown>
+                      <NavDropdown title="CONTACT ME" id="basic-nav-dropdown">
+                        <NavDropdown.Item>
+                          345lemaire@gmail.com
+                        </NavDropdown.Item>
+                      </NavDropdown>
                     </li>
                     <li className="topListItem">
                       <Link className="link" to="/A9B8C7D6E5F4G3H2I1">

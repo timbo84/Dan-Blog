@@ -26,57 +26,68 @@ function Login() {
   function handleSubmit(event) {
     event.preventDefault();
     Login(username, password);
-        navigate(`/write`);
+    navigate(`/write`);
     console.log(login);
-    
   }
 
   return (
     <>
-     
+      <div className='signinBgCover'>
+        <div style={{ minHeight: '800px' }}>
+          <div className="text-center justify-content-center align-self-center">
 
-      {/* Sign In form section*/}
-      <div id="login" xs={12} md={6} lg={4}>
-        <Form onSubmit={handleSubmit}>
-          <Row className=" justify-content-center" id="signin-card">
+            {/* Sign In form section*/}
+            <div xs={12} md={6} lg={4}>
+              <Form id="loginCard" onSubmit={handleSubmit}>
+                <Row className=" justify-content-center" id="signin-card">
 
-            <h1 className="text-center justify-content-center align-self-center">SIGN IN</h1>
-           
+                  <h1 className="text-center justify-content-center align-self-center">SIGN IN</h1>
 
-            <Form.Group className="mb-3">
-              <Form.Label >username</Form.Label>
-              <Form.Control
-                type="username"
-                name="username"
-                value={username}
-                onChange={handleChange}
-              />
-            </Form.Group>
-          </Row>
+                  <Form.Group className="mb-3">
+                    <Form.Label id="formLabelName">User Name</Form.Label>
+                    <Form.Control
+                      id="formLabel"
+                      type="username"
+                      name="username"
+                      value={username}
+                      onChange={handleChange}
+                    />
+                  </Form.Group>
+                </Row>
 
-          <Row className=" justify-content-center" id="signin-card">
-            <Form.Group className="mb-3">
-              <Form.Label >Password</Form.Label>
-              <Form.Control
-                type="password"
-                name="password"
-                value={password}
-                onChange={handleChange}
-              />
-            </Form.Group>
-          </Row>
+                <Row className=" justify-content-center" id="signin-card">
+                  <Form.Group className="mb-3">
+                    <Form.Label id="formLabelName" >Password</Form.Label>
+                    <Form.Control
+                      id="formLabel"
+                      type="password"
+                      name="password"
+                      value={password}
+                      onChange={handleChange}
+                    />
+                  </Form.Group>
+                </Row>
 
-          <Row className="justify-content-center" id="signin-card">
-            <Form.Group className="col-1">
-              <Col xs={12} sm={4} md={4} lg={4}>
-                <Button id="signinFormButton" type="submit">
-                  SUBMIT
-                </Button>
-              </Col>
-            </Form.Group>
-          </Row>
-        </Form>
+                <Row className="justify-content-center" id="signin-card">
+                  <Form.Group className="col-1">
+                    <Col xs={12} sm={4} md={4} lg={4}>
+                      <Button id="signinFormButton" type="submit">
+                        SUBMIT
+                      </Button>
+                    </Col>
+                  </Form.Group>
+                </Row>
+              </Form>
+            </div>
+          </div>
+        </div>
       </div>
+
+
+
+
+
+
     </>
   );
 }

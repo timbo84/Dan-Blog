@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 //y
 export const PostProvider = (props) => {
     const [ postList, setPostList ] = useState([]);
-    const baseUrl =  "http://localhost:8800/api/posts/";
+    const baseUrl =  "http://172.31.3.103/api/posts/";
 
 useEffect(() => {
     async function getAllPost() {
